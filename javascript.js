@@ -18,20 +18,22 @@ function operator(num1,num2,operation){
 if(operation==='+'){
     div1.textContent=" ";
     div1.textContent+=add(num1,num2);
+    return add(num1,num2);
 }
 else if(operation==='-'){
     div1.textContent=" ";
-    div1.textContent+=sub(num1,num2);    
+    div1.textContent+=sub(num1,num2);   
+    return sub(num1,num2);
 }
 else if(operation==='*'){
     div1.textContent=" ";
     div1.textContent+=mul(num1,num2);
-   
+    return mul(num1,num2);
 }
 else if(operation==='/'){
     div1.textContent=" ";
     div1.textContent+=div(num1,num2);
-    
+    return div(num1,num2);
 }
 }
 const btn1=document.querySelector(".button-1");
@@ -326,6 +328,9 @@ btn11.addEventListener("click",()=>{
 });
 btn12.addEventListener("click",()=>{ 
     div1.textContent=" ";
+    num1=null;
+    num2=null;
+    operation=null;
 });
 btn13.addEventListener("click",()=>{ 
     div1.textContent+="+"
@@ -384,8 +389,7 @@ btn16.addEventListener("click",()=>{
     }
 });
 btn17.addEventListener("click",()=>{ 
-    operator(num1,num2,operation);
-    num1=null;
+    num1=operator(num1,num2,operation);
     num2=null;
     operation=null;
 });
