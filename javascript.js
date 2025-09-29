@@ -91,6 +91,7 @@ const btn14=document.querySelector("#button-min");
 const btn15=document.querySelector("#button-div");
 const btn16=document.querySelector("#button-mul");
 const btn17=document.querySelector("#button-eq");
+const btn18=document.querySelector(".button-backspace");
 const div1=document.querySelector(".display");
 const div2=document.querySelector(".calc");
 
@@ -572,6 +573,33 @@ btn17.addEventListener("click",()=>{
     operation=null;
     num3=0;
     num4=0;
+    }
+});
+btn18.addEventListener("click",()=>{ 
+    if(num1!=null && operation===null ){
+        let length=num1.length;
+        let part=num1.slice(0,length-1);
+        div1.textContent=part;
+        num1=part;
+        console.log("num1 back");
+    }
+    else if(operation!==null && num2===null){
+        div1.textContent=num1;
+        operation=null;
+        num2=null;
+        console.log("oper back")
+    }
+    else if(num1!==null && operation!==null){
+      if(num2.length===1){
+        num2=null;
+        div1.textContent=num1+operation;
+      }
+      else{
+        num2.length=length;
+        num2=num2.slice(0,length-1);
+        div1.textContent=num1+operation+num2;
+      }
+        console.log("num2 back")
     }
 });
 }
