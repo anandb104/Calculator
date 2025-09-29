@@ -17,11 +17,13 @@ function div(a,b)
 function dotadd(a,b)
 {
     
-return ((+a)*(10) + (+b)*(10)) / 10;
+let y=((+a)*(10) + (+b)*(10)) / 10;
+return y;
 }
 function dotsub(a,b)
 {
-return (a*10 - b*10) / 10;
+let y= (a*10 - b*10) / 10;
+
 }
 function dotmul(a,b)
 {
@@ -1031,5 +1033,32 @@ if(event.key==='.'){
                 }
             console.log(num2);
             }
+}
+if(event.key ==='Backspace'){
+    if(num1!=null && operation===null ){
+        let length=num1.length;
+        let part=num1.slice(0,length-1);
+        div1.textContent=part;
+        num1=part;
+        console.log("num1 back");
+    }
+    else if(operation!==null && num2===null){
+        div1.textContent=num1;
+        operation=null;
+        num2=null;
+        console.log("oper back")
+    }
+    else if(num1!==null && operation!==null){
+      if(num2.length===1){
+        num2=null;
+        div1.textContent=num1+operation;
+      }
+      else{
+        num2.length=length;
+        num2=num2.slice(0,length-1);
+        div1.textContent=num1+operation+num2;
+      }
+        console.log("num2 back")
+    }
 }
 });
