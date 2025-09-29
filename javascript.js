@@ -60,6 +60,8 @@ let num1=null;
 let operation=null;
 let num2=null;
 let num7;
+let num3=0;
+let num4=0;
 function display(){
 btn1.addEventListener("click",()=>{
    
@@ -366,24 +368,34 @@ btn10.addEventListener("click",()=>{
 btn11.addEventListener("click",()=>{ 
     
     if(num1===null||operation===null){
-        if(num1!=null){
+        if(num1!=null && num3==0){
             num1+=".";
+            div1.textContent+=".";
+            num3+=1;
+           }
+           if(num3>=1){
+            div1.textContent+="";
            }
             else{
                 div1.textContent=" ";
+                div1.textContent+=".";
                 num1=".";
             }
-            div1.textContent+=".";
     console.log(num1);
     }
         if(num1!==null && operation!==null){
-            if(num2!=null){
+            if(num2!=null && num4==0 ){
                 num2+=".";
+                div1.textContent+=".";
+               num4+=1;
+               }
+               if(num4>=1){
+                div1.textContent+="";
                }
                 else{
+                    div1.textContent+=".";
                     num2=".";
                 }
-                div1.textContent+=".";
             console.log(num2);
             }
 });
@@ -392,6 +404,7 @@ btn12.addEventListener("click",()=>{
     num1=null;
     num2=null;
     operation=null;
+    num3=0;
 });
 btn13.addEventListener("click",()=>{ 
     div1.textContent+="+"
@@ -519,6 +532,8 @@ btn17.addEventListener("click",()=>{
    num7=num1;
     num2=null;
     operation=null;
+    num3=0;
+    num4=0;
     }
 });
 }
