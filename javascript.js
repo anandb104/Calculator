@@ -59,12 +59,19 @@ const div2=document.querySelector(".calc");
 let num1=null;
 let operation=null;
 let num2=null;
+let num7;
 function display(){
 btn1.addEventListener("click",()=>{
    
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=1;
+            }
+           else{
             num1+="1";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -88,7 +95,13 @@ btn2.addEventListener("click",()=>{
     
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=2;
+            }
+           else{
             num1+="2";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -113,7 +126,13 @@ btn3.addEventListener("click",()=>{
 
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=3;
+            }
+           else{
             num1+="3";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -137,7 +156,13 @@ btn4.addEventListener("click",()=>{
     
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=4;
+            }
+           else{
             num1+="4";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -161,7 +186,13 @@ btn5.addEventListener("click",()=>{
     
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=5;
+            }
+           else{
             num1+="5";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -185,7 +216,13 @@ btn6.addEventListener("click",()=>{
    
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=6;
+            }
+           else{
             num1+="6";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -210,7 +247,13 @@ btn7.addEventListener("click",()=>{
     
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=7;
+            }
+           else{
             num1+="7";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -234,7 +277,13 @@ btn8.addEventListener("click",()=>{
 
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=8;
+            }
+           else{
             num1+="8";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -258,7 +307,13 @@ btn9.addEventListener("click",()=>{
    
     if(num1===null||operation===null){
         if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=9;
+            }
+           else{
             num1+="9";
+           }
            }
             else{
                 div1.textContent=" ";
@@ -282,10 +337,16 @@ btn10.addEventListener("click",()=>{
     
     if(num1===null||operation===null){
         if(num1!=null){
-            div1.textContent=" ";
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=0;
+            }
+           else{
             num1+="0";
            }
+           }
             else{
+                div1.textContent=" ";
                 num1=0;
             }
             div1.textContent+=0;
@@ -340,7 +401,18 @@ btn13.addEventListener("click",()=>{
     }
     else{
         if(num2!==null){
-            num1=add(num1,num2);
+            if(operation==="+"){
+                num1=add(num1,num2);
+                }
+                else if(operation==="-"){
+                    num1=sub(num1,num2);
+                    }
+                    else if(operation==="*"){
+                        num1=mul(num1,num2);
+                        }
+                        else if(operation==="/"){
+                            num1=div(num1,num2);
+                            }
             operation="+";
             num2=null;
         }
@@ -354,8 +426,21 @@ btn14.addEventListener("click",()=>{
     }
     else{
         if(num2!==null){
-            num1=sub(num1,num2);
+            if(operation==="+"){
+            num1=add(num1,num2);
+            }
+            else if(operation==="-"){
+                num1=sub(num1,num2);
+                }
+                else if(operation==="*"){
+                    num1=mul(num1,num2);
+                    }
+                    else if(operation==="/"){
+                        num1=div(num1,num2);
+                        }
+            console.log(num1);
             operation="-";
+            console.log(`operation=${operation}`);
             num2=null;
         }
     }
@@ -368,7 +453,18 @@ btn15.addEventListener("click",()=>{
     }
     else{
         if(num2!==null){
-            num1=div(num1,num2);
+            if(operation==="+"){
+                num1=add(num1,num2);
+                }
+                else if(operation==="-"){
+                    num1=sub(num1,num2);
+                    }
+                    else if(operation==="*"){
+                        num1=mul(num1,num2);
+                        }
+                        else if(operation==="/"){
+                            num1=div(num1,num2);
+                            }
             operation="/";
             num2=null;
         }
@@ -382,14 +478,26 @@ btn16.addEventListener("click",()=>{
     }
     else{
         if(num2!==null){
-            num1=mul(num1,num2);
+            if(operation==="+"){
+                num1=add(num1,num2);
+                }
+                else if(operation==="-"){
+                    num1=sub(num1,num2);
+                    }
+                    else if(operation==="*"){
+                        num1=mul(num1,num2);
+                        }
+                        else if(operation==="/"){
+                            num1=div(num1,num2);
+                            }
             operation="*";
             num2=null;
         }
     }
 });
 btn17.addEventListener("click",()=>{ 
-    num1=operator(num1,num2,operation);
+   num1=operator(num1,num2,operation);
+   num7=num1;
     num2=null;
     operation=null;
 });
