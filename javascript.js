@@ -1,46 +1,55 @@
 function add(a,b)
 {
-return +a+(+b);
+return y=+a+(+b);
+
 }
 function sub(a,b)
 {
-    return a-b;
+  return y=a-b;
+    
 }
 function mul(a,b)
 {
-    return a*b;
+    return y=a*b;
+  
 }
 function div(a,b)
 {
-    return a/b;
+     return y=a/b;
+
 }
 function dotadd(a,b)
-{
-    
+{  
 let y=((+a)*(10) + (+b)*(10)) / 10;
-return y;
+return y.toPrecision(4);
 }
 function dotsub(a,b)
 {
 let y= (a*10 - b*10) / 10;
-
+return y.toPrecision(4);
 }
 function dotmul(a,b)
 {
-return (a*10 * b*10)/ 10;
+let y= (a*10 * b*10)/ 10;
+return y.toPrecision(4);
 }
 function dotdiv(a,b)
 {
-return (a*10 / b*10) / 10;
+let y= (a*10 / b*10) / 10;
+return y.toPrecision(4);
 }
 function operator(num1,num2,operation){
 if(operation==='+'){
     div1.textContent=" ";
-    if(num3==1 && num4==1){
+    if(num3===1 && num4===1){
+        console.log(num3);
+        console.log(num4);
         div1.textContent+=dotadd(num1,num2);
         return dotadd(num1,num2);
     }
     else{
+        console.log(num3);
+        console.log(num4);
     div1.textContent+=add(num1,num2);
     return add(num1,num2);
     }
@@ -411,34 +420,41 @@ btn11.addEventListener("click",()=>{
             div1.textContent=" ";
             div1.textContent="0.";
             num1="0.";
+            num3+=1;
            }
            else if(num1!=null && num3==0){
             num1+=".";
             div1.textContent+=".";
             num3+=1;
            }
-           if(num3>=1){
+           else if(num3>=1){
             div1.textContent+="";
            }
-            else{
+        
+           else  if(num1===null){
                 div1.textContent=" ";
                 div1.textContent="0.";
                 num1="0.";
+                num3+=1;
             }
     console.log(num1);
-    }
+        }
+
         if(num1!==null && operation!==null){
             if(num2!=null && num4==0 ){
                 num2+=".";
                 div1.textContent+=".";
                num4+=1;
+               console.log(typeof num2);
                }
-               if(num4>=1){
+               else if(num4>=1){
                 div1.textContent+="";
+                
                }
-                else{
+               else if(num2===null){
                     div1.textContent+="0.";
                     num2="0.";
+                    num4+=1;
                 }
             console.log(num2);
             }
@@ -1042,6 +1058,7 @@ if(event.key==='.'){
             div1.textContent=" ";
             div1.textContent="0.";
             num1="0.";
+            num3+=1;
            }
         else if(num1!=null && num3==0){
             num1+=".";
@@ -1055,6 +1072,7 @@ if(event.key==='.'){
                 div1.textContent=" ";
                 div1.textContent="0.";
                 num1="0.";
+                num3+=1;
             }
     console.log(num1);
     }
@@ -1070,6 +1088,7 @@ if(event.key==='.'){
                 else{
                     div1.textContent+="0.";
                     num2="0.";
+                    num4+=1;
                 }
             console.log(num2);
             }
