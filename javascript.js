@@ -416,6 +416,9 @@ btn13.addEventListener("click",()=>{
             operation="+";
             num2=null;
         }
+        else{
+            div1.textContent="Syntax Error";
+        }
     }
 });
 btn14.addEventListener("click",()=>{ 
@@ -443,6 +446,9 @@ btn14.addEventListener("click",()=>{
             console.log(`operation=${operation}`);
             num2=null;
         }
+        else{
+            div1.textContent="Syntax Error";
+        }
     }
 });
 btn15.addEventListener("click",()=>{ 
@@ -467,6 +473,9 @@ btn15.addEventListener("click",()=>{
                             }
             operation="/";
             num2=null;
+        }
+        else{
+            div1.textContent="Syntax Error";
         }
     }
 });
@@ -493,13 +502,24 @@ btn16.addEventListener("click",()=>{
             operation="*";
             num2=null;
         }
+        else{
+            div1.textContent="Syntax Error";
+        }
     }
 });
 btn17.addEventListener("click",()=>{ 
+    if(num2===0 && operation==='/'){
+        div1.textContent="Err(Div by 0)";
+        num1=null;
+        num2=null;
+        operation=null;
+    }
+    else{
    num1=operator(num1,num2,operation);
    num7=num1;
     num2=null;
     operation=null;
+    }
 });
 }
 div2.addEventListener("click",display());
