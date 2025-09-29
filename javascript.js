@@ -41,7 +41,7 @@ return y.toPrecision(4);
 function operator(num1,num2,operation){
 if(operation==='+'){
     div1.textContent=" ";
-    if(num3===1 && num4===1){
+    if(num3===1 || num4===1){
         console.log(num3);
         console.log(num4);
         div1.textContent+=dotadd(num1,num2);
@@ -57,30 +57,38 @@ if(operation==='+'){
 }
 else if(operation==='-'){
     div1.textContent=" ";
-    if(num3==1 && num4==1){
+    if(num3==1 || num4==1){
         div1.textContent+=dotsub(num1,num2);
         return dotsub(num1,num2);
     }
+    else{
+        console.log(num3);
+        console.log(num4);
     div1.textContent+=sub(num1,num2);   
     return sub(num1,num2);
+    }
 }
 else if(operation==='*'){
     div1.textContent=" ";
-    if(num3==1 && num4==1){
+    if(num3==1 || num4==1){
         div1.textContent+=dotmul(num1,num2);
         return dotmul(num1,num2);
     }
+    else{
     div1.textContent+=mul(num1,num2);
     return mul(num1,num2);
+    }
 }
 else if(operation==='/'){
     div1.textContent=" ";
-    if(num3==1 && num4==1){
+    if(num3==1 || num4==1){
         div1.textContent+=dotdiv(num1,num2);
         return dotdiv(num1,num2);
     }
+    else{
     div1.textContent+=div(num1,num2);
     return div(num1,num2);
+    }
 }
 }
 const btn1=document.querySelector(".button-1");
