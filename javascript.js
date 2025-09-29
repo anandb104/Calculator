@@ -652,7 +652,13 @@ btn17.addEventListener("click",()=>{
         operation=null;
     }
     else{
-   num1=operator(num1,num2,operation);
+        if(operation!==null || num2!==null){
+            num1=operator(num1,num2,operation);
+             }
+                 else{
+                num1=div1.textContent;
+                 }
+                 console.log(num1);
    num7=num1;
     num2=null;
     operation=null;
