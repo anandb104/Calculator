@@ -407,7 +407,12 @@ btn10.addEventListener("click",()=>{
 btn11.addEventListener("click",()=>{ 
     
     if(num1===null||operation===null){
-        if(num1!=null && num3==0){
+           if(num1!=null && num3==0 && num1==num7 ){
+            div1.textContent=" ";
+            div1.textContent="0.";
+            num1="0.";
+           }
+           else if(num1!=null && num3==0){
             num1+=".";
             div1.textContent+=".";
             num3+=1;
@@ -444,6 +449,7 @@ btn12.addEventListener("click",()=>{
     num2=null;
     operation=null;
     num3=0;
+    num4=0;
 });
 btn13.addEventListener("click",()=>{ 
     div1.textContent+="+"
@@ -587,7 +593,7 @@ btn18.addEventListener("click",()=>{
         div1.textContent=num1;
         operation=null;
         num2=null;
-        console.log("oper back")
+        console.log("oper back");
     }
     else if(num1!==null && operation!==null){
       if(num2.length===1){
@@ -599,7 +605,7 @@ btn18.addEventListener("click",()=>{
         num2=num2.slice(0,length-1);
         div1.textContent=num1+operation+num2;
       }
-        console.log("num2 back")
+        console.log("num2 back");
     }
 });
 }
@@ -1032,7 +1038,12 @@ if(event.key==='/'){
 }
 if(event.key==='.'){
     if(num1===null||operation===null){
-        if(num1!=null && num3==0){
+        if(num1!=null && num3==0 && num1==num7 ){
+            div1.textContent=" ";
+            div1.textContent="0.";
+            num1="0.";
+           }
+        else if(num1!=null && num3==0){
             num1+=".";
             div1.textContent+=".";
             num3+=1;
@@ -1084,7 +1095,7 @@ if(event.key ==='Backspace'){
         div1.textContent=num1+operation;
       }
       else{
-        num2=num2.toString();
+         num2=num2.toString();
         num2.length=length;
         num2=num2.slice(0,length-1);
         div1.textContent=num1+operation+num2;
