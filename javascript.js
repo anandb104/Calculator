@@ -936,6 +936,7 @@ if(event.key==='='){
     }
     else{
    num1=operator(num1,num2,operation);
+   console.log(num1);
    num7=num1;
     num2=null;
     operation=null;
@@ -1064,6 +1065,7 @@ if(event.key==='.'){
 }
 if(event.key ==='Backspace'){
     if(num1!=null && operation===null ){
+        num1=num1.toString();
         let length=num1.length;
         let part=num1.slice(0,length-1);
         div1.textContent=part;
@@ -1073,15 +1075,16 @@ if(event.key ==='Backspace'){
     else if(operation!==null && num2===null){
         div1.textContent=num1;
         operation=null;
-        num2=null;
         console.log("oper back")
     }
     else if(num1!==null && operation!==null){
       if(num2.length===1){
+        num2=num2.toString();
         num2=null;
         div1.textContent=num1+operation;
       }
       else{
+        num2=num2.toString();
         num2.length=length;
         num2=num2.slice(0,length-1);
         div1.textContent=num1+operation+num2;
