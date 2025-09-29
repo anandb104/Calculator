@@ -1,7 +1,7 @@
 body{
     display:flex;
     flex-direction:column;
-    background-color:lightgray;
+    background-color:beige;
     height:100vh;
 }
 .calc{
@@ -107,6 +107,15 @@ button{
 #calc-img{
     width:95px;
     height:95px;
+}
+.footer{
+    height:100px;
+    width:100%;
+    display:flex;
+   justify-content:center;
+   align-items:center;
+   font-size:32px;
+   background-color: beige;
 }
 
         
