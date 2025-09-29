@@ -14,24 +14,60 @@ function div(a,b)
 {
     return a/b;
 }
+function dotadd(a,b)
+{
+    
+return ((+a)*(10) + (+b)*(10)) / 10;
+}
+function dotsub(a,b)
+{
+return (a*10 - b*10) / 10;
+}
+function dotmul(a,b)
+{
+return (a*10 * b*10)/ 10;
+}
+function dotdiv(a,b)
+{
+return (a*10 / b*10) / 10;
+}
 function operator(num1,num2,operation){
 if(operation==='+'){
     div1.textContent=" ";
+    if(num3==1 && num4==1){
+        div1.textContent+=dotadd(num1,num2);
+        return dotadd(num1,num2);
+    }
+    else{
     div1.textContent+=add(num1,num2);
     return add(num1,num2);
+    }
+    
 }
 else if(operation==='-'){
     div1.textContent=" ";
+    if(num3==1 && num4==1){
+        div1.textContent+=dotsub(num1,num2);
+        return dotsub(num1,num2);
+    }
     div1.textContent+=sub(num1,num2);   
     return sub(num1,num2);
 }
 else if(operation==='*'){
     div1.textContent=" ";
+    if(num3==1 && num4==1){
+        div1.textContent+=dotmul(num1,num2);
+        return dotmul(num1,num2);
+    }
     div1.textContent+=mul(num1,num2);
     return mul(num1,num2);
 }
 else if(operation==='/'){
     div1.textContent=" ";
+    if(num3==1 && num4==1){
+        div1.textContent+=dotdiv(num1,num2);
+        return dotdiv(num1,num2);
+    }
     div1.textContent+=div(num1,num2);
     return div(num1,num2);
 }
@@ -378,8 +414,8 @@ btn11.addEventListener("click",()=>{
            }
             else{
                 div1.textContent=" ";
-                div1.textContent+=".";
-                num1=".";
+                div1.textContent="0.";
+                num1="0.";
             }
     console.log(num1);
     }
@@ -393,8 +429,8 @@ btn11.addEventListener("click",()=>{
                 div1.textContent+="";
                }
                 else{
-                    div1.textContent+=".";
-                    num2=".";
+                    div1.textContent+="0.";
+                    num2="0.";
                 }
             console.log(num2);
             }
@@ -538,3 +574,462 @@ btn17.addEventListener("click",()=>{
 });
 }
 div2.addEventListener("click",display());
+
+document.addEventListener("keydown",(event)=>{
+if(event.key==='0'){
+    console.log(event.key)
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=0;
+            }
+           else{
+            num1+="0";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=0;
+            }
+            div1.textContent+=0;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="0";
+               }
+                else{
+                    num2=0;
+                }
+                div1.textContent+=0;
+            console.log(num2);
+            }
+}
+if(event.key==='1'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=1;
+            }
+           else{
+            num1+="1";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=1;
+            }
+            div1.textContent+=1;
+    console.log(num1);
+    }
+    if(num1!==null && operation!==null){
+       if(num2!=null){
+        num2+="1";
+       }
+        else{
+            num2=1;
+        }
+        div1.textContent+=1;
+        console.log(num2);
+        }
+}
+if(event.key==='2'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=2;
+            }
+           else{
+            num1+="2";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=2;
+            }
+            div1.textContent+=2;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="2";
+               }
+                else{
+                    
+                    num2=2;
+                }
+                div1.textContent+=2;
+            console.log(num2);
+            }
+}
+if(event.key==='3'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=3;
+            }
+           else{
+            num1+="3";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=3;
+            }
+            div1.textContent+=3;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="3";
+               }
+                else{
+                    num2=3;
+                }
+                div1.textContent+=3;
+            console.log(num2);
+            }
+}
+if(event.key==='4'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=4;
+            }
+           else{
+            num1+="4";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=4;
+            }
+            div1.textContent+=4;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="4";
+               }
+                else{
+                    num2=4;
+                }
+                div1.textContent+=4;
+            console.log(num2);
+            }
+}
+if(event.key==='5'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=5;
+            }
+           else{
+            num1+="5";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=5;
+            }
+            div1.textContent+=5;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="5";
+               }
+                else{
+                    num2=5;
+                }
+                div1.textContent+=5;
+            console.log(num2);
+            }
+}
+if(event.key==='6'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=6;
+            }
+           else{
+            num1+="6";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=6;
+            }
+            div1.textContent+=6;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="6";
+               }
+                else{
+
+                    num2=6;
+                }
+                div1.textContent+=6;
+            console.log(num2);
+            }
+}
+if(event.key==='7'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=7;
+            }
+           else{
+            num1+="7";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=7;
+            }
+        div1.textContent+=7;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="7";
+               }
+                else{
+                    num2=7;
+                }
+                div1.textContent+=7;
+            console.log(num2);
+            }
+}
+if(event.key==='8'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=8;
+            }
+           else{
+            num1+="8";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=8;
+            }
+            div1.textContent+=8;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="8";
+               }
+                else{
+                    num2=8;
+                }
+                div1.textContent+=8;
+            console.log(num2);
+            }
+}
+if(event.key==='9'){
+    if(num1===null||operation===null){
+        if(num1!=null){
+            if(num1==num7){
+                div1.textContent=" ";
+                num1=9;
+            }
+           else{
+            num1+="9";
+           }
+           }
+            else{
+                div1.textContent=" ";
+                num1=9;
+            }
+            div1.textContent+=9;
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null){
+                num2+="9";
+               }
+                else{
+                    num2=9;
+                }
+                div1.textContent+=9;
+            console.log(num2);
+            }
+}
+if(event.key==='+'){
+    div1.textContent+="+"
+    if(operation===null){
+       operation="+";
+        console.log(`operation=${operation}`);
+    }
+    else{
+        if(num2!==null){
+            if(operation==="+"){
+                num1=add(num1,num2);
+                }
+                else if(operation==="-"){
+                    num1=sub(num1,num2);
+                    }
+                    else if(operation==="*"){
+                        num1=mul(num1,num2);
+                        }
+                        else if(operation==="/"){
+                            num1=div(num1,num2);
+                            }
+            operation="+";
+            num2=null;
+        }
+        else{
+            div1.textContent="Syntax Error";
+        }
+    }
+}
+if(event.key==='='){
+    if(num2===0 && operation==='/'){
+        div1.textContent="Err(Div by 0)";
+        num1=null;
+        num2=null;
+        operation=null;
+    }
+    else{
+   num1=operator(num1,num2,operation);
+   num7=num1;
+    num2=null;
+    operation=null;
+    num3=0;
+    num4=0;
+    }
+}
+if(event.key==='-'){
+    div1.textContent+="-"
+    if(operation===null){
+                operation="-";
+        console.log(`operation=${operation}`);
+    }
+    else{
+        if(num2!==null){
+            if(operation==="+"){
+            num1=add(num1,num2);
+            }
+            else if(operation==="-"){
+                num1=sub(num1,num2);
+                }
+                else if(operation==="*"){
+                    num1=mul(num1,num2);
+                    }
+                    else if(operation==="/"){
+                        num1=div(num1,num2);
+                        }
+            console.log(num1);
+            operation="-";
+            console.log(`operation=${operation}`);
+            num2=null;
+        }
+        else{
+            div1.textContent="Syntax Error";
+        }
+    }
+}
+if(event.key==='*'){
+    div1.textContent+="*"
+    if(operation===null){
+                operation="*";
+        console.log(`operation=${operation}`);
+    }
+    else{
+        if(num2!==null){
+            if(operation==="+"){
+                num1=add(num1,num2);
+                }
+                else if(operation==="-"){
+                    num1=sub(num1,num2);
+                    }
+                    else if(operation==="*"){
+                        num1=mul(num1,num2);
+                        }
+                        else if(operation==="/"){
+                            num1=div(num1,num2);
+                            }
+            operation="*";
+            num2=null;
+        }
+        else{
+            div1.textContent="Syntax Error";
+        }
+    }
+}
+if(event.key==='/'){
+    div1.textContent+="/"
+    if(operation===null){
+                operation="/";
+        console.log(`operation=${operation}`);
+    }
+    else{
+        if(num2!==null){
+            if(operation==="+"){
+                num1=add(num1,num2);
+                }
+                else if(operation==="-"){
+                    num1=sub(num1,num2);
+                    }
+                    else if(operation==="*"){
+                        num1=mul(num1,num2);
+                        }
+                        else if(operation==="/"){
+                            num1=div(num1,num2);
+                            }
+            operation="/";
+            num2=null;
+        }
+        else{
+            div1.textContent="Syntax Error";
+        }
+    }
+}
+if(event.key==='.'){
+    if(num1===null||operation===null){
+        if(num1!=null && num3==0){
+            num1+=".";
+            div1.textContent+=".";
+            num3+=1;
+           }
+           if(num3>=1){
+            div1.textContent+="";
+           }
+            else{
+                div1.textContent=" ";
+                div1.textContent="0.";
+                num1="0.";
+            }
+    console.log(num1);
+    }
+        if(num1!==null && operation!==null){
+            if(num2!=null && num4==0 ){
+                num2+=".";
+                div1.textContent+=".";
+               num4+=1;
+               }
+               if(num4>=1){
+                div1.textContent+="";
+               }
+                else{
+                    div1.textContent+="0.";
+                    num2="0.";
+                }
+            console.log(num2);
+            }
+}
+});
