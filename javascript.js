@@ -463,28 +463,38 @@ btn12.addEventListener("click",()=>{
     div1.textContent=" ";
     num1=null;
     num2=null;
+    num7=null;
     operation=null;
     num3=0;
     num4=0;
 });
 btn13.addEventListener("click",()=>{ 
-    div1.textContent+="+"
     if(operation===null){
+        if(div1.textContent==="Syntax Error"){
+            div1.textContent=" ";
+        }
+        else{
+            div1.textContent+="+";
        operation="+";
         console.log(`operation=${operation}`);
+        }
     }
     else{
         if(num2!==null){
             if(operation==="+"){
+                div1.textContent+="+";
                 num1=add(num1,num2);
                 }
                 else if(operation==="-"){
+                    div1.textContent+="+";
                     num1=sub(num1,num2);
                     }
                     else if(operation==="*"){
+                        div1.textContent+="+";
                         num1=mul(num1,num2);
                         }
                         else if(operation==="/"){
+                            div1.textContent+="+";
                             num1=div(num1,num2);
                             }
             operation="+";
@@ -492,27 +502,42 @@ btn13.addEventListener("click",()=>{
         }
         else{
             div1.textContent="Syntax Error";
+            operation=null;
+            num1=null;
+            num2=null;
+            num7=null;
+            num3=0;
+            num4=0;
+            }
         }
-    }
 });
 btn14.addEventListener("click",()=>{ 
-    div1.textContent+="-"
     if(operation===null){
+        if(div1.textContent==="Syntax Error"){
+            div1.textContent=" ";
+        }
+        else{
+            div1.textContent+="-"
                 operation="-";
         console.log(`operation=${operation}`);
+    }
     }
     else{
         if(num2!==null){
             if(operation==="+"){
+                div1.textContent+="-"
             num1=add(num1,num2);
             }
             else if(operation==="-"){
+                div1.textContent+="-"
                 num1=sub(num1,num2);
                 }
                 else if(operation==="*"){
+                    div1.textContent+="-"
                     num1=mul(num1,num2);
                     }
                     else if(operation==="/"){
+                        div1.textContent+="-"
                         num1=div(num1,num2);
                         }
             console.log(num1);
@@ -522,27 +547,43 @@ btn14.addEventListener("click",()=>{
         }
         else{
             div1.textContent="Syntax Error";
+            operation=null;
+            num1=null;
+            num2=null;
+            num7=null;
+            num3=0;
+            num4=0;
         }
     }
 });
 btn15.addEventListener("click",()=>{ 
-    div1.textContent+="/"
-    if(operation===null){
+    
+    if(operation===null){ 
+        if(div1.textContent==="Syntax Error"){
+        div1.textContent=" ";
+    }
+    else{
+        div1.textContent+="/"
                 operation="/";
         console.log(`operation=${operation}`);
+    }
     }
     else{
         if(num2!==null){
             if(operation==="+"){
+                div1.textContent+="/"
                 num1=add(num1,num2);
                 }
                 else if(operation==="-"){
+                    div1.textContent+="/"
                     num1=sub(num1,num2);
                     }
                     else if(operation==="*"){
+                        div1.textContent+="/"
                         num1=mul(num1,num2);
                         }
                         else if(operation==="/"){
+                            div1.textContent+="/"
                             num1=div(num1,num2);
                             }
             operation="/";
@@ -550,27 +591,43 @@ btn15.addEventListener("click",()=>{
         }
         else{
             div1.textContent="Syntax Error";
+            operation=null;
+            num1=null;
+            num2=null;
+            num7=null;
+            num3=0;
+            num4=0;
         }
     }
 });
 btn16.addEventListener("click",()=>{ 
-    div1.textContent+="*"
+   
     if(operation===null){
+        if(div1.textContent==="Syntax Error"){
+            div1.textContent=" ";
+        }
+        else{
+            div1.textContent+="*"
                 operation="*";
         console.log(`operation=${operation}`);
+        }
     }
     else{
         if(num2!==null){
             if(operation==="+"){
+                div1.textContent+="*"
                 num1=add(num1,num2);
                 }
                 else if(operation==="-"){
+                    div1.textContent+="*"
                     num1=sub(num1,num2);
                     }
                     else if(operation==="*"){
+                        div1.textContent+="*"
                         num1=mul(num1,num2);
                         }
                         else if(operation==="/"){
+                            div1.textContent+="*"
                             num1=div(num1,num2);
                             }
             operation="*";
@@ -578,6 +635,12 @@ btn16.addEventListener("click",()=>{
         }
         else{
             div1.textContent="Syntax Error";
+            operation=null;
+            num1=null;
+            num2=null;
+            num7=null;
+            num3=0;
+            num4=0;
         }
     }
 });
@@ -922,23 +985,32 @@ if(event.key==='9'){
             }
 }
 if(event.key==='+'){
-    div1.textContent+="+"
     if(operation===null){
+        if(div1.textContent==="Syntax Error"){
+            div1.textContent=" ";
+        }
+        else{
+            div1.textContent+="+";
        operation="+";
         console.log(`operation=${operation}`);
+        }
     }
     else{
         if(num2!==null){
             if(operation==="+"){
+                div1.textContent+="+";
                 num1=add(num1,num2);
                 }
                 else if(operation==="-"){
+                    div1.textContent+="+";
                     num1=sub(num1,num2);
                     }
                     else if(operation==="*"){
+                        div1.textContent+="+";
                         num1=mul(num1,num2);
                         }
                         else if(operation==="/"){
+                            div1.textContent+="+";
                             num1=div(num1,num2);
                             }
             operation="+";
@@ -946,8 +1018,14 @@ if(event.key==='+'){
         }
         else{
             div1.textContent="Syntax Error";
+            operation=null;
+            num1=null;
+            num2=null;
+            num7=null;
+            num3=0;
+            num4=0;
+            }
         }
-    }
 }
 if(event.key==='='){
     if(num2===0 && operation==='/'){
@@ -957,7 +1035,12 @@ if(event.key==='='){
         operation=null;
     }
     else{
+        if(operation!==null || num2!==null){
    num1=operator(num1,num2,operation);
+    }
+        else{
+       num1=div1.textContent;
+        }
    console.log(num1);
    num7=num1;
     num2=null;
@@ -967,23 +1050,32 @@ if(event.key==='='){
     }
 }
 if(event.key==='-'){
-    div1.textContent+="-"
     if(operation===null){
+        if(div1.textContent==="Syntax Error"){
+            div1.textContent=" ";
+        }
+        else{
+            div1.textContent+="-"
                 operation="-";
         console.log(`operation=${operation}`);
+    }
     }
     else{
         if(num2!==null){
             if(operation==="+"){
+                div1.textContent+="-"
             num1=add(num1,num2);
             }
             else if(operation==="-"){
+                div1.textContent+="-"
                 num1=sub(num1,num2);
                 }
                 else if(operation==="*"){
+                    div1.textContent+="-"
                     num1=mul(num1,num2);
                     }
                     else if(operation==="/"){
+                        div1.textContent+="-"
                         num1=div(num1,num2);
                         }
             console.log(num1);
@@ -993,27 +1085,42 @@ if(event.key==='-'){
         }
         else{
             div1.textContent="Syntax Error";
+            operation=null;
+            num1=null;
+            num2=null;
+            num7=null;
+            num3=0;
+            num4=0;
         }
     }
 }
 if(event.key==='*'){
-    div1.textContent+="*"
     if(operation===null){
+        if(div1.textContent==="Syntax Error"){
+            div1.textContent=" ";
+        }
+        else{
+            div1.textContent+="*"
                 operation="*";
         console.log(`operation=${operation}`);
+        }
     }
     else{
         if(num2!==null){
             if(operation==="+"){
+                div1.textContent+="*"
                 num1=add(num1,num2);
                 }
                 else if(operation==="-"){
+                    div1.textContent+="*"
                     num1=sub(num1,num2);
                     }
                     else if(operation==="*"){
+                        div1.textContent+="*"
                         num1=mul(num1,num2);
                         }
                         else if(operation==="/"){
+                            div1.textContent+="*"
                             num1=div(num1,num2);
                             }
             operation="*";
@@ -1021,27 +1128,42 @@ if(event.key==='*'){
         }
         else{
             div1.textContent="Syntax Error";
+            operation=null;
+            num1=null;
+            num2=null;
+            num7=null;
+            num3=0;
+            num4=0;
         }
     }
 }
 if(event.key==='/'){
-    div1.textContent+="/"
-    if(operation===null){
+    if(operation===null){ 
+        if(div1.textContent==="Syntax Error"){
+        div1.textContent=" ";
+    }
+    else{
+        div1.textContent+="/"
                 operation="/";
         console.log(`operation=${operation}`);
+    }
     }
     else{
         if(num2!==null){
             if(operation==="+"){
+                div1.textContent+="/"
                 num1=add(num1,num2);
                 }
                 else if(operation==="-"){
+                    div1.textContent+="/"
                     num1=sub(num1,num2);
                     }
                     else if(operation==="*"){
+                        div1.textContent+="/"
                         num1=mul(num1,num2);
                         }
                         else if(operation==="/"){
+                            div1.textContent+="/"
                             num1=div(num1,num2);
                             }
             operation="/";
@@ -1049,6 +1171,12 @@ if(event.key==='/'){
         }
         else{
             div1.textContent="Syntax Error";
+            operation=null;
+            num1=null;
+            num2=null;
+            num7=null;
+            num3=0;
+            num4=0;
         }
     }
 }
