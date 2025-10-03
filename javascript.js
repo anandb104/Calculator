@@ -1042,7 +1042,7 @@ if(event.key==='+'){
             }
         }
 }
-if(event.key==='='){
+if(event.key==='='||event.key==='Enter'){
     if(num2===0 && operation==='/'){
         div1.textContent="Err(Div by 0)";
         num1=null;
