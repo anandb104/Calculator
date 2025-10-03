@@ -15,7 +15,8 @@ function mul(a,b)
 }
 function div(a,b)
 {
-     return y=a/b;
+     let y=a/b;
+     return y.toPrecision(4);
 
 }
 function dotadd(a,b)
