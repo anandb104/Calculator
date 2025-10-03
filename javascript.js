@@ -677,6 +677,7 @@ btn17.addEventListener("click",()=>{
 });
 btn18.addEventListener("click",()=>{ 
     if(num1!=null && operation===null ){
+        num1=num1.toString();
         let length=num1.length;
         let part=num1.slice(0,length-1);
         div1.textContent=part;
@@ -686,20 +687,21 @@ btn18.addEventListener("click",()=>{
     else if(operation!==null && num2===null){
         div1.textContent=num1;
         operation=null;
-        num2=null;
-        console.log("oper back");
+        console.log("oper back")
     }
     else if(num1!==null && operation!==null){
       if(num2.length===1){
+        num2=num2.toString();
         num2=null;
         div1.textContent=num1+operation;
       }
       else{
+         num2=num2.toString();
         num2.length=length;
         num2=num2.slice(0,length-1);
         div1.textContent=num1+operation+num2;
       }
-        console.log("num2 back");
+        console.log("num2 back")
     }
 });
 }
