@@ -616,7 +616,7 @@ btn16.addEventListener("click",()=>{
             div1.textContent=" ";
         }
         else{
-            div1.textContent+="*"
+            div1.textContent+="×"
                 operation="*";
         console.log(`operation=${operation}`);
         }
@@ -624,19 +624,19 @@ btn16.addEventListener("click",()=>{
     else{
         if(num2!==null){
             if(operation==="+"){
-                div1.textContent+="*"
+                div1.textContent+="×"
                 num1=add(num1,num2);
                 }
                 else if(operation==="-"){
-                    div1.textContent+="*"
+                    div1.textContent+="×"
                     num1=sub(num1,num2);
                     }
                     else if(operation==="*"){
-                        div1.textContent+="*"
+                        div1.textContent+="×"
                         num1=mul(num1,num2);
                         }
                         else if(operation==="/"){
-                            div1.textContent+="*"
+                            div1.textContent+="×"
                             num1=div(num1,num2);
                             }
             operation="*";
@@ -1115,7 +1115,7 @@ if(event.key==='*'){
             div1.textContent=" ";
         }
         else{
-            div1.textContent+="*"
+            div1.textContent+="×"
                 operation="*";
         console.log(`operation=${operation}`);
         }
@@ -1123,19 +1123,19 @@ if(event.key==='*'){
     else{
         if(num2!==null){
             if(operation==="+"){
-                div1.textContent+="*"
+                div1.textContent+="×"
                 num1=add(num1,num2);
                 }
                 else if(operation==="-"){
-                    div1.textContent+="*"
+                    div1.textContent+="×"
                     num1=sub(num1,num2);
                     }
                     else if(operation==="*"){
-                        div1.textContent+="*"
+                        div1.textContent+="×"
                         num1=mul(num1,num2);
                         }
                         else if(operation==="/"){
-                            div1.textContent+="*"
+                            div1.textContent+="×"
                             num1=div(num1,num2);
                             }
             operation="*";
