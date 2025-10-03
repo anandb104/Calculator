@@ -690,18 +690,29 @@ btn18.addEventListener("click",()=>{
         console.log("oper back")
     }
     else if(num1!==null && operation!==null){
-      if(num2.length===1){
         num2=num2.toString();
+      if(num2.length===1){
         num2=null;
+        if(operation==='*'){
+            div1.textContent=num1+"×";   
+        }
+        else{
         div1.textContent=num1+operation;
+        }
+        console.log("num back test");
       }
       else{
-         num2=num2.toString();
         num2.length=length;
         num2=num2.slice(0,length-1);
-        div1.textContent=num1+operation+num2;
-      }
+        if(operation==='*'){
+        div1.textContent=num1+"×"+num2;
+        }
+        else{
+            div1.textContent=num1+operation+num2;  
+        }
         console.log("num2 back")
+      }
+        
     }
 });
 }
@@ -1253,18 +1264,31 @@ if(event.key ==='Backspace'){
         console.log("oper back")
     }
     else if(num1!==null && operation!==null){
+        num2=num2.toString();
       if(num2.length===1){
         num2=num2.toString();
         num2=null;
+        if(operation==='*'){
+            div1.textContent=num1+"×";   
+        }
+        else{
         div1.textContent=num1+operation;
+        }
+        console.log("num back test");
       }
       else{
          num2=num2.toString();
         num2.length=length;
         num2=num2.slice(0,length-1);
-        div1.textContent=num1+operation+num2;
-      }
+        if(operation==='*'){
+        div1.textContent=num1+"×"+num2;
+        }
+        else{
+            div1.textContent=num1+operation+num2;  
+        }
         console.log("num2 back")
+      }
+        
     }
 }
 });
